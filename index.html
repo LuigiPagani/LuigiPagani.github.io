@@ -15,7 +15,7 @@
 <body class="bg-gray-100 font-sans">
     <nav class="bg-primary p-4 text-white">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold">Luigi Pagani</a>
+            <a href="#" class="text-2xl font-bold">Luigi Pagani</a>
             <ul class="flex space-x-4">
                 <li><a href="#about" class="hover:text-gray-300">About</a></li>
                 <li><a href="#education" class="hover:text-gray-300">Education</a></li>
@@ -68,16 +68,27 @@
 
             <section id="notes" class="bg-white rounded-lg shadow-md p-6">
                 <h2 class="text-2xl font-bold mb-4 text-primary">Lecture Notes</h2>
-                <ul class="list-disc list-inside">
-                    <li><a href="#" class="text-primary hover:underline">Numerical Methods for PDE</a></li>
-                    <li><a href="#" class="text-primary hover:underline">Numerical Linear Algebra</a></li>
-                    <li><a href="#" class="text-primary hover:underline">Deep Learning</a></li>
-                    <li><a href="#" class="text-primary hover:underline">Reduced Order Modeling</a></li>
-                    <li><a href="#" class="text-primary hover:underline">Parallel Computing</a></li>
-                    <li><a href="#" class="text-primary hover:underline">Advanced C++ Programming</a></li>
+                <ul class="space-y-2">
+                    <li>
+                        <a href="pdfs/NMDE.pdf" class="text-primary hover:underline" target="_blank">Numerical Methods for Differential Equations</a>
+                        <button onclick="showPDF('pdfs/NMDE.pdf', 'Numerical Methods for Differential Equations')" class="ml-2 bg-primary text-white px-2 py-1 rounded text-sm hover-primary">View</button>
+                    </li>
+                    <li>
+                        <a href="pdfs/Numerical_Linear_Algebra.pdf" class="text-primary hover:underline" target="_blank">Numerical Linear Algebra</a>
+                        <button onclick="showPDF('pdfs/Numerical_Linear_Algebra.pdf', 'Numerical Linear Algebra')" class="ml-2 bg-primary text-white px-2 py-1 rounded text-sm hover-primary">View</button>
+                    </li>
+                    <li>
+                        <a href="pdfs/Quantum_Mechanics.pdf" class="text-primary hover:underline" target="_blank">Quantum Mechanics</a>
+                        <button onclick="showPDF('pdfs/Quantum_Mechanics.pdf', 'Quantum Mechanics')" class="ml-2 bg-primary text-white px-2 py-1 rounded text-sm hover-primary">View</button>
+                    </li>
                 </ul>
             </section>
         </div>
+
+        <section id="pdf-viewer" class="mt-8 bg-white rounded-lg shadow-md p-6" style="display: none;">
+            <h2 id="pdf-title" class="text-2xl font-bold mb-4 text-primary"></h2>
+            <embed id="pdf-embed" src="" type="application/pdf" width="100%" height="600px" />
+        </section>
 
         <section class="bg-white rounded-lg shadow-md p-6 mt-8">
             <h2 class="text-2xl font-bold mb-4 text-primary">Technical Skills</h2>
@@ -102,5 +113,19 @@
     <footer class="bg-primary text-white text-center p-4 mt-8">
         <p>&copy; 2024 Luigi Pagani. All rights reserved.</p>
     </footer>
+
+    <script>
+        function showPDF(pdfPath, title) {
+            const pdfViewer = document.getElementById('pdf-viewer');
+            const pdfEmbed = document.getElementById('pdf-embed');
+            const pdfTitle = document.getElementById('pdf-title');
+            
+            pdfViewer.style.display = 'block';
+            pdfEmbed.src = pdfPath;
+            pdfTitle.textContent = title;
+            
+            pdfViewer.scrollIntoView({behavior: 'smooth'});
+        }
+    </script>
 </body>
 </html>

@@ -3,120 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luigi Pagani - CV</title>
+    <title>Luigi Pagani - Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1 {
-            text-align: center;
-            color: #2c3e50;
-        }
-        h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #2c3e50;
-            padding-bottom: 5px;
-        }
-        .contact-info {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .contact-info a {
-            color: #3498db;
-            text-decoration: none;
-        }
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        .project a {
-            color: #3498db;
-            text-decoration: none;
-        }
-        .project a:hover {
-            text-decoration: underline;
-        }
+        .bg-primary { background-color: #1a5f7a; }
+        .text-primary { color: #1a5f7a; }
+        .border-primary { border-color: #1a5f7a; }
+        .hover-primary:hover { background-color: #134b61; }
     </style>
 </head>
-<body>
-    <h1>Luigi Pagani</h1>
-    <div class="contact-info">
-        <a href="mailto:luigi2.pagani@mail.polimi.it">Email: luigi2.pagani@mail.polimi.it</a> |
-        <a href="https://github.com/LuigiPagani">GitHub: Luigi Pagani</a> |
-        <a href="https://www.linkedin.com/in/luigipagani/">LinkedIn: Luigi Pagani</a>
-    </div>
+<body class="bg-gray-100 font-sans">
+    <nav class="bg-primary p-4 text-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold">Luigi Pagani</a>
+            <ul class="flex space-x-4">
+                <li><a href="#about" class="hover:text-gray-300">About</a></li>
+                <li><a href="#education" class="hover:text-gray-300">Education</a></li>
+                <li><a href="#projects" class="hover:text-gray-300">Projects</a></li>
+                <li><a href="#notes" class="hover:text-gray-300">Lecture Notes</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <h2>Education</h2>
-    <ul>
-        <li>
-            <strong>MSc in High Performance Computing Engineering</strong><br>
-            Politecnico di Milano, Italy<br>
-            Mar 2023 - Present<br>
-            GPA: 28.8/30<br>
-            <strong>Core Courses:</strong> Numerical Methods for PDE, Numerical Linear Algebra, Deep Learning, Reduced Order Modeling, Numerical Analysis for Machine Learning, Parallel Computing, Advanced C++ Programming, Statistical Learning.
-        </li>
-        <li>
-            <strong>BSc in Mathematical Engineering</strong><br>
-            Politecnico di Milano, Italy<br>
-            Sept 2019 - Sept 2022<br>
-            Final Grade: 103/110
-        </li>
-    </ul>
+    <main class="container mx-auto mt-8 p-4">
+        <section id="about" class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 class="text-3xl font-bold mb-4 text-primary">About Me</h2>
+            <p class="mb-4">
+                I'm a Master's student in High Performance Computing Engineering at Politecnico di Milano, 
+                passionate about numerical methods, parallel computing, and machine learning.
+            </p>
+            <div class="flex space-x-4">
+                <a href="mailto:luigi2.pagani@mail.polimi.it" class="bg-primary text-white px-4 py-2 rounded hover-primary">Email</a>
+                <a href="https://github.com/LuigiPagani" class="bg-primary text-white px-4 py-2 rounded hover-primary">GitHub</a>
+                <a href="https://www.linkedin.com/in/luigipagani/" class="bg-primary text-white px-4 py-2 rounded hover-primary">LinkedIn</a>
+            </div>
+        </section>
 
-    <h2>Projects</h2>
-    <ul>
-        <li class="project">
-            <strong>C++ & CUDA Parallel Implementations of Monte Carlo Methods for the 2-D Ising Model</strong><br>
-            <a href="https://github.com/LuigiPagani/Ising_2D">GitHub Repository</a> | 
-            <a href="https://drive.google.com/file/d/1Ry3_7QBixw42r3Ml8MKvDz58lz-9fJYQ/view?usp=sharing">Report</a>
-        </li>
-        <li class="project">
-            <strong>Finite Elements for Neurodegenerative Diseases Modeling in C++</strong><br>
-            <a href="https://github.com/LuigiPagani/Fisher-Kolmogorov-equation-for-neurodegenerative-diseases">GitHub Repository</a> | 
-            <a href="https://drive.google.com/file/d/1Z_eic3iqhNCa4xt2t_pQxnR5GYd7jh4f/view?usp=sharing">Report</a>
-        </li>
-        <li class="project">
-            <strong>Time Series Forecasting with LSTMs, Seq2Seq and Transformers</strong><br>
-            <a href="https://github.com/LuigiPagani/Time-Series-Forecasting-with-NNs">GitHub Repository</a> | 
-            <a href="https://drive.google.com/file/d/15wVHrcFAbyE6s14UGLbmMakay3g72Xcm/view?usp=sharing">Report</a>
-        </li>
-        <li class="project">
-            <strong>CNN and Self-Supervised Learning for Plant Health Identification</strong><br>
-            <a href="https://github.com/LuigiPagani/Plant-Classication-with-NNs">GitHub Repository</a> | 
-            <a href="https://drive.google.com/file/d/1__uAggsOdGkdkG3XGh56rWvAOdWosOOu/view?usp=sharing">Report</a>
-        </li>
-        <li class="project">
-            <strong>POD-Galerkin & DL-ROM for a Parabolic Boundary Value Problem</strong><br>
-            <a href="https://github.com/LuigiPagani/ROM-with-POD-and-DL">GitHub Repository</a>
-        </li>
-        <li>
-            <strong>DL-ROM for the Unsteady Navier Stokes Equation</strong>
-        </li>
-    </ul>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <section id="education" class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold mb-4 text-primary">Education</h2>
+                <div class="mb-4">
+                    <h3 class="text-xl font-semibold">MSc in High Performance Computing Engineering</h3>
+                    <p>Politecnico di Milano, Italy | Mar 2023 - Present</p>
+                    <p>GPA: 28.8/30</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold">BSc in Mathematical Engineering</h3>
+                    <p>Politecnico di Milano, Italy | Sept 2019 - Sept 2022</p>
+                    <p>Final Grade: 103/110</p>
+                </div>
+            </section>
 
-    <h2>Awards</h2>
-    <ul>
-        <li>
-            <strong>Tuition Fee Waiver for High Merits</strong><br>
-            Politecnico di Milano, Italy<br>
-            Academic Year 2023-24<br>
-            Awarded full tuition fee waiver for the academic year 2023-24 due to outstanding academic performance.
-        </li>
-    </ul>
+            <section id="projects" class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold mb-4 text-primary">Projects</h2>
+                <ul class="list-disc list-inside">
+                    <li><a href="#" class="text-primary hover:underline">C++ & CUDA Parallel Monte Carlo Methods</a></li>
+                    <li><a href="#" class="text-primary hover:underline">Finite Elements for Neurodegenerative Diseases</a></li>
+                    <li><a href="#" class="text-primary hover:underline">Time Series Forecasting with Deep Learning</a></li>
+                    <li><a href="#" class="text-primary hover:underline">CNN for Plant Health Identification</a></li>
+                    <li><a href="#" class="text-primary hover:underline">POD-Galerkin & DL-ROM for PDE</a></li>
+                    <li><a href="#" class="text-primary hover:underline">DL-ROM for Navier Stokes Equation</a></li>
+                </ul>
+            </section>
 
-    <h2>Technical Skills</h2>
-    <p>
-        <strong>Programming:</strong> Python, C/C++, CUDA, OpenMP, MPI.<br>
-        <strong>Libraries:</strong> PyTorch, TensorFlow, deal.II, FEniCS, Eigen, Trilinos.<br>
-        <strong>Tools:</strong> Git, Jenkins, CMake.<br>
-        <strong>Operating Systems:</strong> Unix, Linux, Windows.
-    </p>
+            <section id="notes" class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold mb-4 text-primary">Lecture Notes</h2>
+                <ul class="list-disc list-inside">
+                    <li><a href="#" class="text-primary hover:underline">Numerical Methods for PDE</a></li>
+                    <li><a href="#" class="text-primary hover:underline">Numerical Linear Algebra</a></li>
+                    <li><a href="#" class="text-primary hover:underline">Deep Learning</a></li>
+                    <li><a href="#" class="text-primary hover:underline">Reduced Order Modeling</a></li>
+                    <li><a href="#" class="text-primary hover:underline">Parallel Computing</a></li>
+                    <li><a href="#" class="text-primary hover:underline">Advanced C++ Programming</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <section class="bg-white rounded-lg shadow-md p-6 mt-8">
+            <h2 class="text-2xl font-bold mb-4 text-primary">Technical Skills</h2>
+            <ul class="list-disc list-inside">
+                <li><strong>Programming:</strong> Python, C/C++, CUDA, OpenMP, MPI</li>
+                <li><strong>Libraries:</strong> PyTorch, TensorFlow, deal.II, FEniCS, Eigen, Trilinos</li>
+                <li><strong>Tools:</strong> Git, Jenkins, CMake</li>
+                <li><strong>Operating Systems:</strong> Unix, Linux, Windows</li>
+            </ul>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-md p-6 mt-8">
+            <h2 class="text-2xl font-bold mb-4 text-primary">Awards</h2>
+            <div>
+                <h3 class="text-xl font-semibold">Tuition Fee Waiver for High Merits</h3>
+                <p>Politecnico di Milano, Italy | Academic Year 2023-24</p>
+                <p>Awarded full tuition fee waiver for outstanding academic performance.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-primary text-white text-center p-4 mt-8">
+        <p>&copy; 2024 Luigi Pagani. All rights reserved.</p>
+    </footer>
 </body>
 </html>

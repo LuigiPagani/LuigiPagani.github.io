@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luigi Pagani - Portfolio</title>
+    <title>Luigi Pagani</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -52,6 +52,47 @@
 
         @media (min-width: 768px) { /* Tailwind's md breakpoint */
             .experience-item .title-row {
+                flex-direction: row; /* Row for desktop */
+                align-items: baseline;
+            }
+        }
+
+        /* Education item layout */
+        .education-item {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 1.5rem;
+            align-items: start;
+        }
+
+        .education-item .logo-container {
+            width: 100px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .education-item img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .education-item .content {
+            flex: 1;
+        }
+
+        .education-item .title-row {
+            display: flex;
+            flex-direction: column; /* Default to column for mobile */
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        @media (min-width: 768px) { /* Tailwind's md breakpoint */
+            .education-item .title-row {
                 flex-direction: row; /* Row for desktop */
                 align-items: baseline;
             }
@@ -124,7 +165,7 @@
     <main class="container mx-auto mt-12 p-4">
         <!-- Intro Section -->
         <section id="about" class="bg-white rounded-lg shadow-md p-6 mb-8">
-            <h2 class="text-3xl font-bold mb-4 text-custom-blue"> Intro</h2>
+            <h2 class="text-3xl font-bold mb-4 text-custom-blue">Intro</h2>
             <ul class="mb-4 list-disc pl-5">
                 <li>Master's student in High Performance Computing Engineering at Politecnico di Milano.</li>
                 <li>Interested in Scientific Machine Learning and AI for Math.</li>
@@ -186,23 +227,33 @@
 
         <!-- Education Section -->
         <section id="education" class="bg-white rounded-lg shadow-md p-8 mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-custom-blue">Education</h2>
+            <h2 class="text-4xl font-bold mb-6 text-custom-blue">Education</h2>
             
             <!-- MSc in High Performance Computing Engineering -->
-            <div class="mb-6 flex items-center">
-                <img src="/assets/images/polimi-logo.jpg" alt="Politecnico di Milano Logo" class="w-16 h-16 mr-4">
-                <div>
-                    <h3 class="text-2xl font-semibold">MSc in High Performance Computing Engineering</h3>
-                    <p class="text-gray-700">Politecnico di Milano, Italy | Mar 2023 - Present</p>
+            <div class="education-item mb-6">
+                <div class="logo-container">
+                    <img src="/assets/images/polimi-logo.jpg" alt="Politecnico di Milano Logo">
+                </div>
+                <div class="content">
+                    <div class="title-row mb-2">
+                        <h3 class="text-2xl font-semibold">MSc in High Performance Computing Engineering</h3>
+                        <span class="text-gray-600">Mar 2023 - Present</span>
+                    </div>
+                    <p class="text-gray-700">Politecnico di Milano, Italy</p>
                 </div>
             </div>
             
             <!-- BSc in Mathematical Engineering -->
-            <div class="flex items-center">
-                <img src="/assets/images/polimi-logo.jpg" alt="Politecnico di Milano Logo" class="w-16 h-16 mr-4">
-                <div>
-                    <h3 class="text-2xl font-semibold">BSc in Mathematical Engineering</h3>
-                    <p class="text-gray-700">Politecnico di Milano, Italy | Sept 2019 - Sept 2022</p>
+            <div class="education-item">
+                <div class="logo-container">
+                    <img src="/assets/images/polimi-logo.jpg" alt="Politecnico di Milano Logo">
+                </div>
+                <div class="content">
+                    <div class="title-row mb-2">
+                        <h3 class="text-2xl font-semibold">BSc in Mathematical Engineering</h3>
+                        <span class="text-gray-600">Sept 2019 - Sept 2022</span>
+                    </div>
+                    <p class="text-gray-700">Politecnico di Milano, Italy</p>
                 </div>
             </div>
         </section>

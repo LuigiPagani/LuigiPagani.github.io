@@ -16,7 +16,7 @@
             color: #1e3a8a;
         }
 
-        /* Experience item layout  fixes */
+        /* Experience item layout fixes */
         .experience-item {
             display: grid;
             grid-template-columns: 100px 1fr;
@@ -61,6 +61,11 @@
         .hover\:text-gray-300:hover {
             color: #d1d5db !important;
         }
+
+        /* Hover effects for buttons */
+        .hover-primary:hover {
+            background-color: #1c3d91;
+        }
     </style>
 </head>
 <body class="bg-gray-100 font-sans">
@@ -69,7 +74,7 @@
         <div class="container mx-auto flex justify-between items-center">
             <a href="#" class="text-2xl font-bold">Luigi Pagani</a>
             <ul class="flex space-x-4">
-                <li><a href="#about" class="hover:text-gray-300 flex items-center"><i class="fas fa-user mr-1"></i> About me</a></li>
+                <li><a href="#about" class="hover:text-gray-300 flex items-center"><i class="fas fa-user mr-1"></i> Intro</a></li>
                 <li><a href="#experience" class="hover:text-gray-300 flex items-center"><i class="fas fa-briefcase mr-1"></i> Experience</a></li>
                 <li><a href="#education" class="hover:text-gray-300 flex items-center"><i class="fas fa-graduation-cap mr-1"></i> Education</a></li>
                 <li><a href="#projects" class="hover:text-gray-300 flex items-center"><i class="fas fa-project-diagram mr-1"></i> Projects</a></li>
@@ -80,6 +85,22 @@
 
     <!-- Main Content -->
     <main class="container mx-auto mt-12 p-4">
+        <!-- Intro Section -->
+        <section id="about" class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 class="text-3xl font-bold mb-4 text-custom-blue">About Me</h2>
+            <ul class="mb-4 list-disc pl-5">
+                <li>Master's student in High Performance Computing Engineering at Politecnico di Milano</li>
+                <li>Interested in Scientific Machine Learning and AI for Math</li>
+                <li>Full-time ML Research Engineer Intern at Siemens Digital Industries Software</li>
+                <li>Contributor to Project Numina, working on synthetic data pipelines for LLMs to advance AI in mathematics</li>
+            </ul>
+            <div class="flex space-x-4">
+                <a href="mailto:luigi2.pagani@mail.polimi.it" class="bg-custom-blue text-white px-4 py-2 rounded hover-primary">Email</a>
+                <a href="https://github.com/LuigiPagani" class="bg-custom-blue text-white px-4 py-2 rounded hover-primary">GitHub</a>
+                <a href="https://www.linkedin.com/in/luigipagani/" class="bg-custom-blue text-white px-4 py-2 rounded hover-primary">LinkedIn</a>
+            </div>
+        </section>
+
         <!-- Work Experience Section -->
         <section id="experience" class="bg-white rounded-lg shadow-md p-8 mb-12">
             <h2 class="text-4xl font-bold mb-6 text-custom-blue">Work Experience</h2>

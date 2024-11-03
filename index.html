@@ -1,159 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags and title -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luigi Pagani - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom styles -->
     <style>
-        .bg-primary { background-color: #1a5f7a; }
-        .text-primary { color: #1a5f7a; }
-        .border-primary { border-color: #1a5f7a; }
-        .hover-primary:hover { background-color: #134b61; }
+        /* Custom styles if needed */
     </style>
 </head>
 <body class="bg-gray-100 font-sans">
-    <nav class="bg-primary p-4 text-white">
+    <!-- Navigation Bar -->
+    <nav class="bg-blue-600 p-4 text-white">
         <div class="container mx-auto flex justify-between items-center">
             <a href="#" class="text-2xl font-bold">Luigi Pagani</a>
             <ul class="flex space-x-4">
-                <li><a href="#about" class="hover:text-gray-300">About me</a></li>
-                <li><a href="#experience" class="hover:text-gray-300">Experience</a></li>
-                <li><a href="#education" class="hover:text-gray-300">Education</a></li>
-                <li><a href="#projects" class="hover:text-gray-300">Projects</a></li>
-                <li><a href="#notes" class="hover:text-gray-300">Lecture Notes</a></li>
+                <li><a href="#about" class="hover:text-gray-300 flex items-center"><i class="fas fa-user mr-1"></i> About me</a></li>
+                <li><a href="#experience" class="hover:text-gray-300 flex items-center"><i class="fas fa-briefcase mr-1"></i> Experience</a></li>
+                <li><a href="#education" class="hover:text-gray-300 flex items-center"><i class="fas fa-graduation-cap mr-1"></i> Education</a></li>
+                <li><a href="#projects" class="hover:text-gray-300 flex items-center"><i class="fas fa-project-diagram mr-1"></i> Projects</a></li>
+                <li><a href="#notes" class="hover:text-gray-300 flex items-center"><i class="fas fa-book mr-1"></i> Lecture Notes</a></li>
             </ul>
         </div>
     </nav>
 
-    <main class="container mx-auto mt-8 p-4">
-        <section id="about" class="bg-white rounded-lg shadow-md p-6 mb-8">
-            <h2 class="text-3xl font-bold mb-4 text-primary">About Me</h2>
-            <ul class="mb-4 list-disc pl-5">
-                <li>Master's student in High Performance Computing Engineering at Politecnico di Milano</li>
-                <li>Interested in Scientific Machine Learning and AI for Math</li>
-                <li>Full-time ML Research Engineer Intern at Siemens Digital Industries Software</li>
-                <li>Contributor to Project Numina, working on synthetic data pipelines for LLMs to advance AI in mathematics</li>
+    <!-- Main Content -->
+    <main class="container mx-auto mt-12 p-4">
+        <!-- About Me Section -->
+        <section id="about" class="bg-white rounded-lg shadow-md p-8 mb-12">
+            <h2 class="text-4xl font-bold mb-6 text-blue-600">About Me</h2>
+            <ul class="list-disc pl-6 space-y-2 text-lg text-gray-700">
+                <li>Master's student in High Performance Computing Engineering at Politecnico di Milano.</li>
+                <li>Passionate about Scientific Machine Learning and AI for Mathematics.</li>
+                <li>Full-time ML Research Engineer Intern at Siemens Digital Industries Software.</li>
+                <li>Contributor to Project Numina, advancing AI in mathematics through synthetic data pipelines for LLMs.</li>
             </ul>
-            <div class="flex space-x-4">
-                <a href="mailto:luigi2.pagani@mail.polimi.it" class="bg-primary text-white px-4 py-2 rounded hover-primary">Email</a>
-                <a href="https://github.com/LuigiPagani" class="bg-primary text-white px-4 py-2 rounded hover-primary">GitHub</a>
-                <a href="https://www.linkedin.com/in/luigipagani/" class="bg-primary text-white px-4 py-2 rounded hover-primary">LinkedIn</a>
+            <div class="flex space-x-4 mt-6">
+                <a href="mailto:luigi2.pagani@mail.polimi.it" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded flex items-center">
+                    <i class="fas fa-envelope mr-2"></i> Email
+                </a>
+                <a href="https://github.com/LuigiPagani" class="bg-gray-800 hover:bg-gray-900 text-white px-5 py-3 rounded flex items-center">
+                    <i class="fab fa-github mr-2"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/luigipagani/" class="bg-blue-700 hover:bg-blue-800 text-white px-5 py-3 rounded flex items-center">
+                    <i class="fab fa-linkedin mr-2"></i> LinkedIn
+                </a>
             </div>
         </section>
 
-        <section id="experience" class="bg-white rounded-lg shadow-md p-6 mb-8">
-            <h2 class="text-3xl font-bold mb-4 text-primary">Work Experience</h2>
-            <div class="mb-6">
-                <div class="flex justify-between items-start mb-2">
-                    <h3 class="text-xl font-semibold">ML Research Engineer Intern</h3>
-                    <span class="text-gray-600">Oct 2024 - Present</span>
+        <!-- Work Experience Section -->
+        <section id="experience" class="bg-white rounded-lg shadow-md p-8 mb-12">
+            <h2 class="text-4xl font-bold mb-6 text-blue-600">Work Experience</h2>
+            <!-- Experience Item -->
+            <div class="mb-8 flex items-start">
+                <!-- Company Logo -->
+                <img src="assets/images/siemens-logo.png" alt="Siemens Digital Industries Software Logo" class="w-16 h-16 mr-6">
+                <div>
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-2xl font-semibold">ML Research Engineer Intern</h3>
+                        <span class="text-gray-600">Oct 2024 - Present</span>
+                    </div>
+                    <h4 class="text-xl text-blue-600 mb-2">Siemens Digital Industries Software</h4>
+                    <p class="text-gray-700 mb-2">Core Tasks:</p>
+                    <ul class="list-disc list-inside text-gray-700 pl-4">
+                        <li>Developing transformer neural networks for fast numerical parametric Partial Differential Equations solvers.</li>
+                    </ul>
                 </div>
-                <div class="flex justify-between items-start mb-2">
-                    <h4 class="text-lg text-primary">Siemens Digital Industries Software</h4>
-                </div>
-                <p class="text-gray-700">
-                    Core Tasks:
-                </p>
-                <ul class="list-disc list-inside text-gray-700 ml-4">
-                    <li>Developing transformer neural networks for fast numerical parametric Partial Differential Equations solvers</li>
-                </ul>
             </div>
-
-            <div class="mb-6">
-                <div class="flex justify-between items-start mb-2">
-                    <h3 class="text-xl font-semibold">Open Source Contributor</h3>
-                    <span class="text-gray-600">Aug 2024 - Present</span>
+            <!-- Open Source Contributor Item -->
+            <div class="mb-8 flex items-start">
+                <!-- Project Numina Logo -->
+                <img src="assets/images/numina-logo.png" alt="Project Numina Logo" class="w-16 h-16 mr-6">
+                <div>
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-2xl font-semibold">Open Source Contributor</h3>
+                        <span class="text-gray-600">Aug 2024 - Present</span>
+                    </div>
+                    <h4 class="text-xl text-blue-600 mb-2">
+                        <a href="https://projectnumina.ai/" target="_blank" class="hover:underline">Project Numina</a>
+                    </h4>
+                    <p class="text-gray-700 mb-2">Mission: Fostering the development of artificial intelligence in the field of mathematics.</p>
+                    <p class="text-gray-700 mb-2">Core Tasks:</p>
+                    <ul class="list-disc list-inside text-gray-700 pl-4">
+                        <li>Contributing to the synthetic data pipeline for LLMs.</li>
+                    </ul>
                 </div>
-                <div class="flex justify-between items-start mb-2">
-                    <h4 class="text-lg text-primary"><a href="https://projectnumina.ai/" target="_blank">Project Numina</a></h4>
-                </div>
-                <p class="text-gray-700">
-                    Mission: Fostering the development of artificial intelligence in the field of mathematics.
-                </p>
-                <p class="text-gray-700">
-                    Core Tasks:
-                </p>
-                <ul class="list-disc list-inside text-gray-700 ml-4">
-                    <li>Contributing to the synthetic data pipeline for LLMs</li>
-                </ul>
             </div>
         </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <section id="education" class="bg-white rounded-lg shadow-md p-6">
-                <h2 class="text-2xl font-bold mb-4 text-primary">Education</h2>
-                <div class="mb-4">
-                    <h3 class="text-xl font-semibold">MSc in High Performance Computing Engineering</h3>
-                    <p>Politecnico di Milano, Italy | Mar 2023 - Present</p>
+        <!-- Grid Sections -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <!-- Education Section -->
+            <section id="education" class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl font-bold mb-6 text-blue-600">Education</h2>
+                <div class="mb-6">
+                    <h3 class="text-2xl font-semibold">MSc in High Performance Computing Engineering</h3>
+                    <p class="text-gray-700">Politecnico di Milano, Italy | Mar 2023 - Present</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-semibold">BSc in Mathematical Engineering</h3>
-                    <p>Politecnico di Milano, Italy | Sept 2019 - Sept 2022</p>
+                    <h3 class="text-2xl font-semibold">BSc in Mathematical Engineering</h3>
+                    <p class="text-gray-700">Politecnico di Milano, Italy | Sept 2019 - Sept 2022</p>
                 </div>
             </section>
 
-            <section id="projects" class="bg-white rounded-lg shadow-md p-6">
-                <h2 class="text-2xl font-bold mb-4 text-primary">Projects</h2>
-                <ul class="list-disc list-inside space-y-4">
+            <!-- Projects Section -->
+            <section id="projects" class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl font-bold mb-6 text-blue-600">Projects</h2>
+                <ul class="space-y-6">
+                    <!-- Project Item -->
                     <li>
-                        <a href="https://github.com/LuigiPagani/Ising_2D" target="_blank" class="text-primary hover:underline">C++ & CUDA Parallel Monte Carlo Methods</a>
+                        <a href="https://github.com/LuigiPagani/Ising_2D" target="_blank" class="text-xl text-blue-600 hover:underline font-semibold">
+                            C++ & CUDA Parallel Monte Carlo Methods
+                        </a>
                         <br />
-                        <a href="https://drive.google.com/file/d/1Ry3_7QBixw42r3Ml8MKvDz58lz-9fJYQ/view?usp=sharing" target="_blank" class="text-sm text-gray-600 hover:underline">Report</a>
+                        <a href="https://drive.google.com/file/d/1Ry3_7QBixw42r3Ml8MKvDz58lz-9fJYQ/view?usp=sharing" target="_blank" class="text-sm text-gray-600 hover:underline">
+                            <i class="fas fa-file-pdf mr-1"></i>Report
+                        </a>
+                    </li>
+                    <!-- Project Item -->
+                    <li>
+                        <a href="https://github.com/LuigiPagani/Fisher-Kolmogorov-equation-for-neurodegenerative-diseases" target="_blank" class="text-xl text-blue-600 hover:underline font-semibold">
+                            Finite Elements for Neurodegenerative Diseases
+                        </a>
+                        <br />
+                        <a href="https://drive.google.com/file/d/1Z_eic3iqhNCa4xt2t_pQxnR5GYd7jh4f/view?usp=sharing" target="_blank" class="text-sm text-gray-600 hover:underline">
+                            <i class="fas fa-file-pdf mr-1"></i>Report
+                        </a>
+                    </li>
+                    <!-- Add more project items as needed -->
+                    <li>
+                        <a href="https://github.com/LuigiPagani/Time-Series-Forecasting-with-NNs" target="_blank" class="text-xl text-blue-600 hover:underline font-semibold">
+                            Time Series Forecasting with Deep Learning
+                        </a>
+                        <br />
+                        <a href="https://drive.google.com/file/d/15wVHrcFAbyE6s14UGLbmMakay3g72Xcm/view?usp=sharing" target="_blank" class="text-sm text-gray-600 hover:underline">
+                            <i class="fas fa-file-pdf mr-1"></i>Report
+                        </a>
                     </li>
                     <li>
-                        <a href="https://github.com/LuigiPagani/Fisher-Kolmogorov-equation-for-neurodegenerative-diseases" target="_blank" class="text-primary hover:underline">Finite Elements for Neurodegenerative Diseases</a>
+                        <a href="https://github.com/LuigiPagani/Plant-Classication-with-NNs" target="_blank" class="text-xl text-blue-600 hover:underline font-semibold">
+                            CNN for Plant Health Identification
+                        </a>
                         <br />
-                        <a href="https://drive.google.com/file/d/1Z_eic3iqhNCa4xt2t_pQxnR5GYd7jh4f/view?usp=sharing" target="_blank" class="text-sm text-gray-600 hover:underline">Report</a>
+                        <a href="https://drive.google.com/file/d/1__uAggsOdGkdkG3XGh56rWvAOdWosOOu/view?usp=sharing" target="_blank" class="text-sm text-gray-600 hover:underline">
+                            <i class="fas fa-file-pdf mr-1"></i>Report
+                        </a>
                     </li>
                     <li>
-                        <a href="https://github.com/LuigiPagani/Time-Series-Forecasting-with-NNs" target="_blank" class="text-primary hover:underline">Time Series Forecasting with Deep Learning</a>
-                        <br />
-                        <a href="https://drive.google.com/file/d/15wVHrcFAbyE6s14UGLbmMakay3g72Xcm/view?usp=sharing" target="_blank" class="text-sm text-gray-600 hover:underline">Report</a>
+                        <a href="https://github.com/LuigiPagani/ROM-with-POD-and-DL" target="_blank" class="text-xl text-blue-600 hover:underline font-semibold">
+                            ROM with POD-Galerkin & POD-NN for Parabolic Boundary Value Problems
+                        </a>
                     </li>
                     <li>
-                        <a href="https://github.com/LuigiPagani/Plant-Classication-with-NNs" target="_blank" class="text-primary hover:underline">CNN for Plant Health Identification</a>
+                        <a href="https://github.com/LuigiPagani/DL-ROM-for-Navier-Stokes" target="_blank" class="text-xl text-blue-600 hover:underline font-semibold">
+                            Deep Learning ROM for the Unsteady Navier-Stokes Equation
+                        </a>
                         <br />
-                        <a href="https://drive.google.com/file/d/1__uAggsOdGkdkG3XGh56rWvAOdWosOOu/view?usp=sharing" target="_blank" class="text-sm text-gray-600 hover:underline">Report</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/LuigiPagani/ROM-with-POD-and-DL" target="_blank" class="text-primary hover:underline">ROM with POD-Galerkin & POD-NN for Parabolic Boundary Value Problems</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/LuigiPagani/DL-ROM-for-Navier-Stokes" target="_blank" class="text-primary hover:underline">Deep Learining ROM for the Unsteady Navier Stokes Equation</a>
-                        <br />
-                        <a href="https://drive.google.com/file/d/1v78gM2SPBPhEOVm7RQaKwvz1sIkPUx2_/view?usp=sharing" target="_blank" class="text-sm text-gray-600 hover:underline">Report</a>
+                        <a href="https://drive.google.com/file/d/1v78gM2SPBPhEOVm7RQaKwvz1sIkPUx2_/view?usp=sharing" target="_blank" class="text-sm text-gray-600 hover:underline">
+                            <i class="fas fa-file-pdf mr-1"></i>Report
+                        </a>
                     </li>
                 </ul>
             </section>
 
-            <section id="notes" class="bg-white rounded-lg shadow-md p-6">
-                <h2 class="text-2xl font-bold mb-4 text-primary">Lecture Notes</h2>
-                <ul class="space-y-2">
+            <!-- Lecture Notes Section -->
+            <section id="notes" class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl font-bold mb-6 text-blue-600">Lecture Notes</h2>
+                <ul class="space-y-4">
                     <li>
-                        <a href="pdfs/NMPDE.pdf" class="text-primary hover:underline" target="_blank">Numerical Methods for Differential Equations</a>
+                        <a href="pdfs/NMPDE.pdf" class="text-xl text-blue-600 hover:underline flex items-center" target="_blank">
+                            <i class="fas fa-file-pdf mr-2"></i>Numerical Methods for Differential Equations
+                        </a>
                     </li>
                     <li>
-                        <a href="pdfs/Numerical_Linear_Algebra.pdf" class="text-primary hover:underline" target="_blank">Numerical Linear Algebra</a>
+                        <a href="pdfs/Numerical_Linear_Algebra.pdf" class="text-xl text-blue-600 hover:underline flex items-center" target="_blank">
+                            <i class="fas fa-file-pdf mr-2"></i>Numerical Linear Algebra
+                        </a>
                     </li>
                     <li>
-                        <a href="pdfs/Quantum_Mechanics.pdf" class="text-primary hover:underline" target="_blank">Quantum Mechanics</a>
+                        <a href="pdfs/Quantum_Mechanics.pdf" class="text-xl text-blue-600 hover:underline flex items-center" target="_blank">
+                            <i class="fas fa-file-pdf mr-2"></i>Quantum Mechanics
+                        </a>
                     </li>
                     <li>
-                        <a href="pdfs/NAML.pdf" class="text-primary hover:underline" target="_blank">Numerical Analysis for Machine Learning</a>
+                        <a href="pdfs/NAML.pdf" class="text-xl text-blue-600 hover:underline flex items-center" target="_blank">
+                            <i class="fas fa-file-pdf mr-2"></i>Numerical Analysis for Machine Learning
+                        </a>
                     </li>
                 </ul>
             </section>
         </div>
 
-        <section id="pdf-viewer" class="mt-8 bg-white rounded-lg shadow-md p-6" style="display: none;">
-            <h2 id="pdf-title" class="text-2xl font-bold mb-4 text-primary"></h2>
-            <embed id="pdf-embed" src="" type="application/pdf" width="100%" height="600px" />
-        </section>
-
-        <section class="bg-white rounded-lg shadow-md p-6 mt-8">
-            <h2 class="text-2xl font-bold mb-4 text-primary">Technical Skills</h2>
-            <ul class="list-disc list-inside">
+        <!-- Technical Skills Section -->
+        <section class="bg-white rounded-lg shadow-md p-8 mt-12">
+            <h2 class="text-3xl font-bold mb-6 text-blue-600">Technical Skills</h2>
+            <ul class="list-disc list-inside text-lg text-gray-700 space-y-2">
                 <li><strong>Programming:</strong> Python, C/C++, CUDA, OpenMP, MPI</li>
                 <li><strong>Libraries:</strong> PyTorch, TensorFlow, deal.II, FEniCS, Eigen, Trilinos</li>
                 <li><strong>Tools:</strong> Git, Jenkins, CMake</li>
@@ -162,22 +208,11 @@
         </section>
     </main>
 
-    <footer class="bg-primary text-white text-center p-4 mt-8">
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white text-center p-6 mt-12">
         <p>&copy; 2024 Luigi Pagani. All rights reserved.</p>
     </footer>
 
-    <script>
-        function showPDF(pdfPath, title) {
-            const pdfViewer = document.getElementById('pdf-viewer');
-            const pdfEmbed = document.getElementById('pdf-embed');
-            const pdfTitle = document.getElementById('pdf-title');
-            
-            pdfViewer.style.display = 'block';
-            pdfEmbed.src = pdfPath;
-            pdfTitle.textContent = title;
-            
-            pdfViewer.scrollIntoView({behavior: 'smooth'});
-        }
-    </script>
+
 </body>
 </html>

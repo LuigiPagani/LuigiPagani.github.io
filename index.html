@@ -66,6 +66,20 @@
         .hover-primary:hover {
             background-color: #1c3d91;
         }
+
+        /* Mobile Menu Styles */
+        .mobile-menu {
+            display: none;
+        }
+
+        @media (max-width: 767px) {
+            .mobile-menu {
+                display: block;
+            }
+            .desktop-menu {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-100 font-sans">
@@ -73,7 +87,22 @@
     <nav class="bg-custom-blue p-4 text-white">
         <div class="container mx-auto flex justify-between items-center">
             <a href="#" class="text-2xl font-bold">Luigi Pagani</a>
-            <ul class="flex space-x-4">
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex space-x-4 desktop-menu">
+                <li><a href="#about" class="hover:text-gray-300 flex items-center"><i class="fas fa-user mr-1"></i> Intro</a></li>
+                <li><a href="#experience" class="hover:text-gray-300 flex items-center"><i class="fas fa-briefcase mr-1"></i> Experience</a></li>
+                <li><a href="#education" class="hover:text-gray-300 flex items-center"><i class="fas fa-graduation-cap mr-1"></i> Education</a></li>
+                <li><a href="#projects" class="hover:text-gray-300 flex items-center"><i class="fas fa-project-diagram mr-1"></i> Projects</a></li>
+                <li><a href="#notes" class="hover:text-gray-300 flex items-center"><i class="fas fa-book mr-1"></i> Lecture Notes</a></li>
+            </ul>
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden mobile-menu focus:outline-none">
+                <i class="fas fa-bars fa-2x"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-custom-blue p-4">
+            <ul class="flex flex-col space-y-4">
                 <li><a href="#about" class="hover:text-gray-300 flex items-center"><i class="fas fa-user mr-1"></i> Intro</a></li>
                 <li><a href="#experience" class="hover:text-gray-300 flex items-center"><i class="fas fa-briefcase mr-1"></i> Experience</a></li>
                 <li><a href="#education" class="hover:text-gray-300 flex items-center"><i class="fas fa-graduation-cap mr-1"></i> Education</a></li>
@@ -94,10 +123,10 @@
                 <li>Full-time ML Research Engineer Intern at Siemens Digital Industries Software.</li>
                 <li>Contributor to Project Numina, working on synthetic data pipelines for LLMs to advance AI in mathematics.</li>
             </ul>
-            <div class="flex space-x-4">
-                <a href="mailto:luigi2.pagani@mail.polimi.it" class="bg-custom-blue text-white px-4 py-2 rounded hover-primary">Email</a>
-                <a href="https://github.com/LuigiPagani" class="bg-custom-blue text-white px-4 py-2 rounded hover-primary">GitHub</a>
-                <a href="https://www.linkedin.com/in/luigipagani/" class="bg-custom-blue text-white px-4 py-2 rounded hover-primary">LinkedIn</a>
+            <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
+                <a href="mailto:luigi2.pagani@mail.polimi.it" class="bg-custom-blue text-white px-4 py-2 rounded hover-primary text-center">Email</a>
+                <a href="https://github.com/LuigiPagani" class="bg-custom-blue text-white px-4 py-2 rounded hover-primary text-center">GitHub</a>
+                <a href="https://www.linkedin.com/in/luigipagani/" class="bg-custom-blue text-white px-4 py-2 rounded hover-primary text-center">LinkedIn</a>
             </div>
         </section>
 
@@ -267,5 +296,15 @@
     <footer class="bg-custom-blue text-white text-center p-6 mt-12">
         <p>&copy; 2024 Luigi Pagani. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
